@@ -9,7 +9,7 @@ class User(models.Model):
     last_name = models.CharField(max_length=30)
     email = models.CharField(max_length=30)
     phone = models.CharField(max_length=50)
-    genre = models.CharField(max_length=20, default="non genre")
+    gendre = models.CharField(max_length=20, default="non genre")
 
     def __str__(self):
         return self.email
@@ -37,5 +37,5 @@ class Reservation(models.Model):
     stadium = models.ForeignKey(Stadium, on_delete=models.CASCADE, related_name='stadiums')
     reserved_start_date = models.DateTimeField()
     reserved_end_date = models.DateTimeField()
-    time = models.CharField(max_length=10)
+  
     

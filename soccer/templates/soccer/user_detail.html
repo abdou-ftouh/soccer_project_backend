@@ -1,0 +1,16 @@
+{% extends 'soccer/base.html' %} {% block content %}
+
+<h2>{{user.first_name}} <a href="{% url 'user_edit' pk=user.pk %}">(edit)</a></h2>
+<h2>{{user.last_name}}</h2>
+<p>{{user.gendre}}</p>
+<span>{{user.phone}}</span>
+<a href="{% url 'user_delete' pk=user.pk %}">Delete</a>
+<h3>Reservations <a href="">(+)</a></h3>
+<ul>
+  {% for reservation in user.reservations.all %}
+  <li>
+    <a href="">{{ reservation.reserved_start_date }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

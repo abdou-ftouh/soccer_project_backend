@@ -1,0 +1,12 @@
+{% extends 'soccer/base.html' %} {% block content %}
+<h2>Locations <a href="">(+)</a></h2>
+<ul>
+  {% for location in locations %}
+  <li>
+    <a href="">{{ location.city }}</a>
+    <p>{{location.address}}</p>
+    <span>{{location.zip}}</span>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}
