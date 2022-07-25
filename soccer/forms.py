@@ -13,5 +13,6 @@ class LocationForm(forms.ModelForm):
 
     class Meta:
         model = Location
-        fields = ('city', 'address', 'zip',)
+        fields = ('city',)
 
+# , 'address', 'zip',
